@@ -1,10 +1,12 @@
 📦 AdEnvi – Mobile Inventory System with QR and Voice Control
 
 📱 Overview
+
 AdEnvi is a mobile inventory management system developed for a Mobile Development class project.
 It combines modern mobile features such as QR code scanning, voice commands, and image capture to simplify item tracking and management.
 
 ✨ Features
+
 -- 🔍 QR Code Scanning
 Quickly scan an item's QR code to view and update its details.
 
@@ -18,6 +20,7 @@ Take and store item photos directly within the app for visual inventory tracking
 Add, update, and view item details with a clean and responsive interface.
 
 🛠️ Technologies Used
+
 -- Android Studio (Native Android development)
 
 -- Java 
@@ -29,4 +32,5 @@ Add, update, and view item details with a clean and responsive interface.
 -- Camera API for capturing item images
 
 🎓 Project Purpose
+
 This project was created as a capstone for my Mobile Development class, aimed at demonstrating how native Android features can be combined to create an efficient and user-friendly inventory system.
