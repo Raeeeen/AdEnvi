@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    tools:context=".Fragments.VoiceSearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/voicecodelayout"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="88dp"
+            app:lottie_speed="1"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loadinganim2"
+            app:lottie_autoPlay="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/voiceempty"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="88dp"
+            android:gravity="center"
+            android:text="EMPTY"
+            android:visibility="visible"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="300dp"
+            android:visibility="gone"
+            android:id="@+id/constraintlayoutdetails"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="88dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/settings_activity_background"
+            android:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/deptOfficeList"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/categoryicon"
+                        app:layout_constraintBottom_toBottomOf="@+id/deptOffice"
+                        app:layout_constraintStart_toEndOf="@+id/deptOffice"
+                        app:layout_constraintTop_toTopOf="@+id/deptOffice" />
+
+                    <EditText
+                        android:id="@+id/categoryinfo"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                        app:layout_constraintStart_toEndOf="@+id/textView5"
+                        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Category:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <ImageButton
+                        android:id="@+id/categorylist"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/categoryicon"
+                        app:layout_constraintBottom_toBottomOf="@+id/categoryinfo"
+                        app:layout_constraintStart_toEndOf="@+id/categoryinfo"
+                        app:layout_constraintTop_toTopOf="@+id/categoryinfo" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Dept./Office:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                    <EditText
+                        android:id="@+id/deptOffice"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+                    <EditText
+                        android:id="@+id/dateAcquired"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView8"
+                        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Date Acquired:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Model No:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <EditText
+                        android:id="@+id/modelNumber"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Item No:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <EditText
+                        android:id="@+id/itemNumber"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toTopOf="@+id/textView6"
+                        app:layout_constraintVertical_bias="0.466" />
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:text="Item Name:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/getimg" />
+
+                    <EditText
+                        android:id="@+id/itemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+                        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+                    <ImageButton
+                        android:id="@+id/getimg"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="fitXY"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/submitbtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/generateQr"
+                        app:srcCompat="@drawable/submitbtnicon" />
+
+                    <ImageButton
+                        android:id="@+id/cancelbtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toBottomOf="@+id/submitbtn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/submitbtn"
+                        app:srcCompat="@drawable/cancelbtnicon" />
+
+                    <ImageView
+                        android:id="@+id/qrcode2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.505"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/categoryinfo" />
+
+                    <LinearLayout
+                        android:id="@+id/generateQr"
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/signin_background"
+                        android:gravity="center"
+                        android:minWidth="300dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="@+id/qrcode2"
+                        app:layout_constraintStart_toStartOf="@+id/qrcode2"
+                        app:layout_constraintTop_toBottomOf="@+id/qrcode2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Generate QR"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

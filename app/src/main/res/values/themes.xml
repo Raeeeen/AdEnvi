@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AdEnvi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/lightBlue</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="Theme.AdEnvi" parent="Base.Theme.AdEnvi" />
+</resources>
