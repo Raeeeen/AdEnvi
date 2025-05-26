@@ -18,9 +18,13 @@ Add, update, and view item details with a clean and responsive interface.
 
 🛠️ Technologies Used
 -- Android Studio (Native Android development)
+
 -- Java / Kotlin (depending on implementation)
+
 -- QR Code Library (e.g., ZXing or ML Kit)
+
 -- Voice Recognition API (Android SpeechRecognizer)
+
 -- Camera API for capturing item images
 
 🎓 Project Purpose
