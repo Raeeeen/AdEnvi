@@ -19,7 +19,7 @@ Add, update, and view item details with a clean and responsive interface.
 🛠️ Technologies Used
 -- Android Studio (Native Android development)
 
--- Java / Kotlin (depending on implementation)
+-- Java 
 
 -- QR Code Library (e.g., ZXing or ML Kit)
 
