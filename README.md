@@ -1,4 +1,5 @@
 📦 AdEnvi – Mobile Inventory System with QR and Voice Control
+
 📱 Overview
 AdEnvi is a mobile inventory management system developed for a Mobile Development class project.
 It combines modern mobile features such as QR code scanning, voice commands, and image capture to simplify item tracking and management.
